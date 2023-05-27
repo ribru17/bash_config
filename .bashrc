@@ -13,6 +13,9 @@ alias grep='grep --color=auto'
 alias :q='exit'
 alias :wq='exit'
 
+# tar help
+alias tar-unzip='tar -xvzf'
+
 # git aliases to easily uncommit and recommit changes (while keeping local
 # changes in the files)
 git() {
@@ -39,3 +42,9 @@ PS1='\[\033[32m\]╭\[\033[40m\]┨\[\033[37m\]\[\033[40m\]  \u \[\033[30m\]\
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+#[ -f "/home/rileyb/.ghcup/env" ] && source "/home/rileyb/.ghcup/env" # ghcup-env
+[ -f "/home/rileyb/.ghcup/env" ] && source "/home/rileyb/.ghcup/env" # ghcup-env
+
+# start shell with neofetch
+neofetch
