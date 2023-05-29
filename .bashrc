@@ -16,6 +16,12 @@ alias :wq='exit'
 # tar help
 alias tar-unzip='tar -xvzf'
 
+# update pacman mirrors
+# NOTE: this command assumes you changed your mirror list to a file called
+# `newmirrorlist` in `/etc/pacman.d/`. This is nice because it keeps the
+# original mirror list as a backup.
+alias pacman-update-mirrors='sudo reflector --verbose -c "United States" --latest 5 --age 12 --protocol http,https --sort rate --save /etc/pacman.d/newmirrorlist'
+
 # git aliases to easily uncommit and recommit changes (while keeping local
 # changes in the files)
 git() {
