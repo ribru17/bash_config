@@ -35,6 +35,12 @@ git() {
     fi
 }
 
+# get wezterm undercurl after following these steps:
+# https://wezfurlong.org/wezterm/faq.html?highlight=undercur#how-do-i-enable-undercurl-curly-underlines
+if [[ $TERM_PROGRAM == "WezTerm" ]]; then
+    export TERM="wezterm"
+fi
+
 # *two different cool `PS1` prompts* 
 # NOTE: on Konsole with transparent background the parts of the prompts that
 # share the same color as the background color (if any, determined by color
@@ -51,5 +57,5 @@ export NVM_DIR="$HOME/.nvm"
 
 [ -f "/home/rileyb/.ghcup/env" ] && source "/home/rileyb/.ghcup/env" # ghcup-env
 
-# start shell with neofetch
-neofetch
+# start shell with fastfetch
+fastfetch
