@@ -25,6 +25,9 @@ alias tar-unzip='tar -xvzf'
 # original mirror list as a backup.
 alias pacman-update-mirrors='sudo reflector --verbose -c "United States" --latest 5 --age 12 --protocol http,https --sort rate --save /etc/pacman.d/newmirrorlist'
 
+# search packages easier
+alias pacman-search='pacman -Q | rg'
+
 # git aliases to easily uncommit and recommit changes (while keeping local
 # changes in the files)
 git() {
@@ -35,6 +38,15 @@ git() {
         # can also do `git reset 'HEAD@{n}'` where `n` is number of commits
     else
         command git "$@"
+    fi
+}
+
+# simple way to count lines of code in the current directory
+loc() {
+    if [[ -z "$1" ]]; then
+        command find . -regextype sed -not -regex '\./\.git.*' -type f | xargs wc -l | sort -n
+    else
+        command find . -regextype sed -not -regex '\./\.git.*' -regex ".*\.$1" -type f | xargs wc -l | sort -n
     fi
 }
 
