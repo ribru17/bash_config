@@ -5,6 +5,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# set editor
+export EDITOR=nvim
+
 # faster text editing potential
 alias vi='nvim'
 
