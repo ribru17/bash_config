@@ -59,7 +59,7 @@ if [[ $TERM_PROGRAM == "WezTerm" ]]; then
     export TERM="wezterm"
 fi
 
-# *two different cool `PS1` prompts* 
+# Some cool `PS1` prompts
 # NOTE: on Konsole with transparent background the parts of the prompts that
 # share the same color as the background color (if any, determined by color
 # scheme) will also be transparent. workaround is only to disable transparency
@@ -67,7 +67,7 @@ fi
 # the original. hacky but works.
 
 # PS1='\[\033[32m\]╭\[\033[40m\]┨\[\033[37m\]\[\033[40m\] \u <=> \w \[\033[32m\]┃\[\033[00m\]\n\[\033[32m\]╰─►\[\033[00m\]\$ \[\033[00m\]'
-PS1='\[\033[32m\]╭\[\033[40m\]┨\[\033[37m\]\[\033[40m\]  \u \[\033[30m\]\[\033[42m\] \w \[\033[00m\]\[\033[32m\]\n\[\033[32m\]╰─►\[\033[00m\]\$ \[\033[00m\]'
+PS1='\[\033[32m\]╭\[\033[40m\]┨\[\033[37m\]\[\033[40m\]  \u \[\033[30m\]\[\033[42m\] \w \[\033[00m\]\[\033[32m\]\n\[\033[32m\]╰─🢒\[\033[00m\]\$ \[\033[00m\]'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
