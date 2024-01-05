@@ -31,19 +31,6 @@ alias pacman-update-mirrors='sudo reflector --verbose -c "United States" --lates
 # search packages easier
 alias pacman-search='pacman -Q | rg'
 
-# git aliases to easily uncommit and recommit changes (while keeping local
-# changes in the files)
-git() {
-    if [[ $@ == "uncommit" ]]; then
-        command git reset HEAD~1
-    elif [[ $@ == "recommit" ]]; then
-        command git reset ORIG_HEAD
-        # can also do `git reset 'HEAD@{n}'` where `n` is number of commits
-    else
-        command git "$@"
-    fi
-}
-
 # simple way to count lines of code in the current directory
 loc() {
     if [[ -z "$1" ]]; then
@@ -69,6 +56,7 @@ fi
 # PS1='\[\033[32m\]╭\[\033[40m\]┨\[\033[37m\]\[\033[40m\] \u <=> \w \[\033[32m\]┃\[\033[00m\]\n\[\033[32m\]╰─►\[\033[00m\]\$ \[\033[00m\]'
 PS1='\[\033[32m\]╭\[\033[40m\]┨\[\033[37m\]\[\033[40m\]  \u \[\033[30m\]\[\033[42m\] \w \[\033[00m\]\[\033[32m\]\n\[\033[32m\]╰─🢒\[\033[00m\]\$ \[\033[00m\]'
 
+export BAT_THEME="bamboo"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
