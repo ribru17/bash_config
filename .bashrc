@@ -10,6 +10,7 @@ export EDITOR=nvim
 
 # faster text editing potential
 alias vi='nvim'
+alias g='git'
 
 # nice colorizing
 alias ls='ls --color=auto'
