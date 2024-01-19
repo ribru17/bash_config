@@ -64,5 +64,8 @@ export NVM_DIR="$HOME/.nvm"
 
 [ -f "/home/rileyb/.ghcup/env" ] && source "/home/rileyb/.ghcup/env" # ghcup-env
 
+# access Node.js dependencies from Bash prompt when in project root
+export PATH=$PATH:./node_modules/.bin
+
 # start shell with fastfetch
 fastfetch
